@@ -1,35 +1,38 @@
-import { motion } from "framer-motion"
+import { Button } from "@/components/ui/button"
+import { PageProps } from "@/types/IPages"
+import { motion, AnimatePresence } from "framer-motion"
 
-const LandingPage = () => {
+const LandingPage: React.FC<PageProps> = ({ onClick }) => {
 	return (
-		<div className="flex flex-col items-center justify-center gap-2 w-[70%]">
+		<AnimatePresence initial={true}>
 			<motion.div
-				initial={{ opacity: 0, x: -200 }}
-				whileInView={{ opacity: 1, x: 0 }}
-				transition={{ duration: 1.5 }}
-				className="relative"
+				initial={{ y: 300, opacity: 0 }}
+				animate={{ y: 0, opacity: 1 }}
+				exit={{ y: -300, opacity: 0 }}
+				transition={{ type: "spring", duration: 1 }}
+				className="flex flex-col items-center justify-center gap-2 w-[70%]"
 			>
-				<img src="roadmap.png" alt="Imagen" className="w-full h-full" />
-				<div className="flex flex-col items-center gap-2 p-4 absolute inset-0 w-4/6 h-2/4 text-center m-auto">
-					<h1 className="text-2xl font-black font-serif">
-						The Journey of the Lost Treasure
-					</h1>
-					<p className="text-center text-sm m-auto italic font-serif">
-						You have found an ancient map that leads you in search of a lost
-						treasure. To reach the treasure, you must solve a series of riddles
-						related to the trip.
-					</p>
+				<div className="relative">
+					<img src="roadmap.png" alt="Imagen" className="w-full h-full" />
+					<div className="flex flex-col items-center gap-2 p-4 absolute inset-0 w-4/6 h-2/4 text-center m-auto">
+						<h1 className="text-2xl font-black font-serif">
+							The Journey of the Lost Treasure
+						</h1>
+						<p className="text-center text-sm m-auto italic font-serif">
+							You have found an ancient map that leads you in search of a lost
+							treasure. To reach the treasure, you must solve a series of
+							riddles related to the trip.
+						</p>
+					</div>
+				</div>
+				<Button className="bg-amber-800" onClick={onClick}>
+					Start Journey
+				</Button>
+				<div className="flex flex-col items-center">
+					<img src="cofreTesoro.png" alt="Chess" className="w-2/4 h-2/4" />
 				</div>
 			</motion.div>
-			<motion.div
-				initial={{ opacity: 0, x: 200 }}
-				whileInView={{ opacity: 1, x: 0 }}
-				transition={{ duration: 1.5 }}
-				className="flex flex-col items-center"
-			>
-				<img src="cofreTesoro.png" alt="Chess" className="w-2/4 h-2/4" />
-			</motion.div>
-		</div>
+		</AnimatePresence>
 	)
 }
 

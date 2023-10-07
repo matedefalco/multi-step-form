@@ -1,0 +1,18 @@
+{
+	"gameRiddles": [
+		{
+			"riddle": "Amidst nature's whispered lore, Where secrets hide, and more. In shadows deep and still, Where are you if you have the skill?",
+			"firstRiddle": [
+				{ "title": "Beach", "image": "", "isCorrect": false },
+				{ "title": "Forest", "image": "", "isCorrect": true },
+				{ "title": "Mountain", "image": "", "isCorrect": false }
+			]
+		},
+		{
+			"secondRiddle": []
+		},
+		{
+			"thirdRiddle": []
+		}
+	]
+}
