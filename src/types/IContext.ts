@@ -1,8 +1,9 @@
 import { ReactNode } from "react"
 
 export interface GameContextType {
-	userAnswers: Record<string, boolean>
-	updateUserAnswers: (questionId: string, answer: boolean) => void
+	userAnswers: Record<string, string>
+	updateUserAnswers: (questionId: string, outcome: string) => void
+	currentOutcome: string | null
 }
 
 export interface UserAnswersProviderProps {

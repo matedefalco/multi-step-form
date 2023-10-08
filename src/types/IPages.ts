@@ -5,6 +5,10 @@ export interface PageProps {
 	options?: {
 		title: string
 		image: string
-		isCorrect: boolean
+		outcome: string
+	}[]
+	outcomes?: {
+		id: string
+		result: string
 	}[]
 }

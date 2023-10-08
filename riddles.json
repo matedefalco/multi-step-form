@@ -3,41 +3,171 @@
 		{
 			"riddle": "Amidst nature's whispered lore, Where secrets hide, and more. In shadows deep and still, Where are you if you have the skill?",
 			"options": [
-				{ "title": "Beach", "image": "", "isCorrect": false },
-				{ "title": "Forest", "image": "", "isCorrect": true },
-				{ "title": "Mountain", "image": "", "isCorrect": false }
+				{
+					"title": "Beach",
+					"image": "",
+					"outcome": "beachOutcome"
+				},
+				{
+					"title": "Forest",
+					"image": "",
+					"outcome": "forestOutcome"
+				},
+				{
+					"title": "Mountain",
+					"image": "",
+					"outcome": "mountainOutcome"
+				}
+			],
+			"outcomes": [
+				{
+					"id": "beachOutcome",
+					"result": "You find yourself on a peaceful beach with golden sands and gentle waves lapping at your feet. The salty breeze fills the air, and seagulls soar in the distance."
+				},
+				{
+					"id": "forestOutcome",
+					"result": "As you venture into the forest, the trees close in around you, and a sense of enchantment fills the air. Shafts of dappled sunlight create a magical atmosphere."
+				},
+				{
+					"id": "mountainOutcome",
+					"result": "The path ahead becomes steep and challenging as you ascend the mountain. The air grows thinner, and the world expands below you, revealing breathtaking vistas of valleys and peaks."
+				}
 			]
 		},
 		{
 			"riddle": "Amongst noble luster, I outshine the rest, In the earth's deep hold, I truly am the best. In wealth's grand trio, I claim the highest place, In this shining puzzle, what gem can you embrace?",
 			"options": [
-				{ "title": "Gold", "image": "", "isCorrect": false },
-				{ "title": "Silver", "image": "", "isCorrect": false },
-				{ "title": "Diamonds", "image": "", "isCorrect": true }
+				{
+					"title": "Gold",
+					"image": "",
+					"outcome": "goldOutcome"
+				},
+				{
+					"title": "Silver",
+					"image": "",
+					"outcome": "silverOutcome"
+				},
+				{
+					"title": "Diamonds",
+					"image": "",
+					"outcome": "diamondsOutcome"
+				}
+			],
+			"outcomes": [
+				{
+					"id": "goldOutcome",
+					"result": "Your choice of gold leads you to a world of opulence and luxury. You walk through golden halls adorned with treasures, feeling like royalty."
+				},
+				{
+					"id": "silverOutcome",
+					"result": "You find yourself in a realm of silver splendor, surrounded by shimmering elegance. It's a place where beauty and grace reign."
+				},
+				{
+					"id": "diamondsOutcome",
+					"result": "Your path to diamonds takes you to a dazzling realm where every surface sparkles and gleams. You're surrounded by brilliance and radiance."
+				}
 			]
 		},
 		{
 			"riddle": "I'm in the toolbox, I'm used for a grip, With jaws that can hold, I won't let things slip. What am I, in this treasure quest, With a metallic heart, and a handle that's best?",
 			"options": [
-				{ "title": "Screwdriver", "image": "", "isCorrect": false },
-				{ "title": "Pliers", "image": "", "isCorrect": true },
-				{ "title": "Hammer", "image": "", "isCorrect": false }
+				{
+					"title": "Screwdriver",
+					"image": "",
+					"outcome": "screwdriverOutcome"
+				},
+				{
+					"title": "Pliers",
+					"image": "",
+					"outcome": "pliersOutcome"
+				},
+				{
+					"title": "Hammer",
+					"image": "",
+					"outcome": "hammerOutcome"
+				}
+			],
+			"outcomes": [
+				{
+					"id": "screwdriverOutcome",
+					"result": "Choosing the screwdriver, you continue your journey with a versatile tool in hand. It may not be the most glamorous choice, but its utility proves invaluable."
+				},
+				{
+					"id": "pliersOutcome",
+					"result": "Picking up the pliers, you're ready to tackle any challenge that comes your way. With a firm grip on your destiny, you move forward with confidence."
+				},
+				{
+					"id": "hammerOutcome",
+					"result": "Selecting the hammer, you feel the power in your hands. Your path may be filled with opportunities to shape your destiny, one strike at a time."
+				}
 			]
 		},
 		{
 			"riddle": "I sail on water, an adventure awaits, Through storms and calm seas, I navigate. With a crew on board, we seek the unknown, What am I, a vessel of tales to be shown?",
 			"options": [
-				{ "title": "Train", "image": "", "isCorrect": false },
-				{ "title": "Car", "image": "", "isCorrect": false },
-				{ "title": "Ship", "image": "", "isCorrect": true }
+				{
+					"title": "Train",
+					"image": "",
+					"outcome": "trainOutcome"
+				},
+				{
+					"title": "Car",
+					"image": "",
+					"outcome": "carOutcome"
+				},
+				{
+					"title": "Ship",
+					"image": "",
+					"outcome": "shipOutcome"
+				}
+			],
+			"outcomes": [
+				{
+					"id": "trainOutcome",
+					"result": "Opting for the train, you embark on a journey through picturesque landscapes. The rhythmic clatter of tracks carries you toward new horizons."
+				},
+				{
+					"id": "carOutcome",
+					"result": "Choosing the car, you hit the open road with freedom and excitement. Your path is paved with adventure as you steer toward the next destination."
+				},
+				{
+					"id": "shipOutcome",
+					"result": "Selecting the ship, you set sail on an epic voyage across the boundless sea. With the wind in your sails and a sense of endless possibilities, you explore uncharted waters."
+				}
 			]
 		},
 		{
 			"riddle": "In tales of old, I wielded a blade, A pirate's heart, in the sun and the shade. With a hat on my head, and a treasure to find, What am I, in the lore of humankind?",
 			"options": [
-				{ "title": "Explorer", "image": "", "isCorrect": false },
-				{ "title": "Captain", "image": "", "isCorrect": false },
-				{ "title": "Pirate", "image": "", "isCorrect": true }
+				{
+					"title": "Explorer",
+					"image": "",
+					"outcome": "explorerOutcome"
+				},
+				{
+					"title": "Captain",
+					"image": "",
+					"outcome": "captainOutcome"
+				},
+				{
+					"title": "Pirate",
+					"image": "",
+					"outcome": "pirateOutcome"
+				}
+			],
+			"outcomes": [
+				{
+					"id": "explorerOutcome",
+					"result": "Becoming an explorer, you set off on a quest to uncover hidden mysteries. With a thirst for knowledge and adventure, you're ready to chart new territories."
+				},
+				{
+					"id": "captainOutcome",
+					"result": "Taking the role of a captain, you command a ship and crew on a voyage to distant lands. Your leadership skills guide you toward legendary discoveries."
+				},
+				{
+					"id": "pirateOutcome",
+					"result": "Embracing the life of a pirate, you sail under the black flag in search of treasure and excitement. Your adventures are filled with swashbuckling action and hidden riches."
+				}
 			]
 		}
 	]

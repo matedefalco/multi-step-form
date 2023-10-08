@@ -22,6 +22,7 @@ const App = () => {
 			<Riddle
 				riddle={currentPageData.riddle}
 				options={currentPageData.options}
+				outcomes={currentPageData.outcomes}
 				onClick={() => handlePageChange(activePage + 1)}
 			/>
 		)

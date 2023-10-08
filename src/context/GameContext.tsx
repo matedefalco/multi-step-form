@@ -12,18 +12,21 @@ export function useUserAnswers() {
 }
 
 export function UserAnswersProvider({ children }: UserAnswersProviderProps) {
-	const [userAnswers, setUserAnswers] = useState<Record<string, boolean>>({})
+	const [userAnswers, setUserAnswers] = useState<Record<string, string>>({})
+	const [currentOutcome, setCurrentOutcome] = useState<string | null>(null)
 
-	const updateUserAnswers = (questionId: string, answer: boolean) => {
+	const updateUserAnswers = (questionId: string, outcome: string) => {
 		setUserAnswers((prevAnswers) => ({
 			...prevAnswers,
-			[questionId]: answer,
+			[questionId]: outcome,
 		}))
+		setCurrentOutcome(outcome)
 	}
-	console.log("Suka ~ file: GameContext.tsx:24 ~ userAnswers:", userAnswers)
 
 	return (
-		<GameContext.Provider value={{ userAnswers, updateUserAnswers }}>
+		<GameContext.Provider
+			value={{ userAnswers, updateUserAnswers, currentOutcome }}
+		>
 			{children}
 		</GameContext.Provider>
 	)

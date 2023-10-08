@@ -5,35 +5,45 @@ import { useUserAnswers } from "@/context/GameContext"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 
-const Riddle: React.FC<PageProps> = ({ onClick, riddle, options }) => {
+const Riddle: React.FC<PageProps> = ({
+	onClick,
+	riddle,
+	options,
+	outcomes,
+}) => {
 	const { updateUserAnswers } = useUserAnswers()
 
 	const [optionSelected, setOptionSelected] = useState<{
 		selectedIndex: number | null
-		isCorrect: boolean
+		outcome: string | null
 	}>({
 		selectedIndex: null,
-		isCorrect: false,
+		outcome: null,
 	})
 
 	const [questionId, setQuestionId] = useState<string>("")
 
-	const handleOptionSelect = (
-		selectedQuestionId: string,
-		isCorrect: boolean,
-		index: number
-	) => {
-		setOptionSelected({
-			selectedIndex: index,
-			isCorrect,
-		})
+	const handleOptionSelect = (selectedQuestionId: string, index: number) => {
+		const selectedOption = options && options[index]
+		if (selectedOption) {
+			setOptionSelected({
+				selectedIndex: index,
+				outcome: selectedOption.outcome,
+			})
+		}
 		setQuestionId(selectedQuestionId)
 	}
 
 	const handleSubmit = () => {
-		if (optionSelected.selectedIndex !== null && questionId) {
-			updateUserAnswers(questionId, optionSelected.isCorrect)
-			onClick()
+		if (optionSelected.selectedIndex !== null && questionId && outcomes) {
+			const selectedOutcomeId = optionSelected.outcome
+			const selectedOutcome = outcomes.find(
+				(outcome) => outcome.id === selectedOutcomeId
+			)
+			if (selectedOutcome) {
+				updateUserAnswers(questionId, selectedOutcome.result)
+				onClick()
+			}
 		}
 	}
 
@@ -57,9 +67,7 @@ const Riddle: React.FC<PageProps> = ({ onClick, riddle, options }) => {
 						options.map((option, index) => (
 							<button
 								key={index}
-								onClick={() =>
-									handleOptionSelect(option.title, option.isCorrect, index)
-								}
+								onClick={() => handleOptionSelect(option.title, index)}
 							>
 								<Card
 									className={`hover:scale-110 active:border-2 ${
