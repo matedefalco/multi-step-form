@@ -1,6 +1,8 @@
 import { useState } from "react"
 import LandingPage from "./views/LandingPage"
-import FirstRiddle from "./views/FirstRiddle"
+import Riddle from "./views/Riddle"
+import Outcome from "./views/Outcome"
+import Riddles from "../riddles.json"
 
 const App = () => {
 	const [activePage, setActivePage] = useState<number>(0)
@@ -9,14 +11,27 @@ const App = () => {
 		setActivePage(page)
 	}
 
-	const pages = [
-		<LandingPage key="landing" onClick={() => handlePageChange(1)} />,
-		<FirstRiddle key="firstRiddle" onClick={() => handlePageChange(2)} />,
-	]
+	const currentPageData = Riddles.gameRiddles[activePage - 1]
+
+	let currentPage = null
+
+	if (activePage === 0) {
+		currentPage = <LandingPage onClick={() => handlePageChange(1)} />
+	} else if (activePage >= 1 && activePage < 5 && currentPageData.options) {
+		currentPage = (
+			<Riddle
+				riddle={currentPageData.riddle}
+				options={currentPageData.options}
+				onClick={() => handlePageChange(activePage + 1)}
+			/>
+		)
+	} else {
+		currentPage = <Outcome />
+	}
 
 	return (
 		<main className="w-full h-full min-h-screen bg-island bg-cover flex flex-col items-center justify-center">
-			{pages[activePage]}
+			{currentPage}
 		</main>
 	)
 }

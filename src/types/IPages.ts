@@ -1,5 +1,10 @@
-import { MouseEventHandler } from "react"
-
 export interface PageProps {
-	onClick: MouseEventHandler<HTMLButtonElement>
+	onClick: () => void
+	key?: number
+	riddle?: string
+	options?: {
+		title: string
+		image: string
+		isCorrect: boolean
+	}[]
 }

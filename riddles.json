@@ -2,17 +2,43 @@
 	"gameRiddles": [
 		{
 			"riddle": "Amidst nature's whispered lore, Where secrets hide, and more. In shadows deep and still, Where are you if you have the skill?",
-			"firstRiddle": [
+			"options": [
 				{ "title": "Beach", "image": "", "isCorrect": false },
 				{ "title": "Forest", "image": "", "isCorrect": true },
 				{ "title": "Mountain", "image": "", "isCorrect": false }
 			]
 		},
 		{
-			"secondRiddle": []
+			"riddle": "Amongst noble luster, I outshine the rest, In the earth's deep hold, I truly am the best. In wealth's grand trio, I claim the highest place, In this shining puzzle, what gem can you embrace?",
+			"options": [
+				{ "title": "Gold", "image": "", "isCorrect": false },
+				{ "title": "Silver", "image": "", "isCorrect": false },
+				{ "title": "Diamonds", "image": "", "isCorrect": true }
+			]
 		},
 		{
-			"thirdRiddle": []
+			"riddle": "I'm in the toolbox, I'm used for a grip, With jaws that can hold, I won't let things slip. What am I, in this treasure quest, With a metallic heart, and a handle that's best?",
+			"options": [
+				{ "title": "Screwdriver", "image": "", "isCorrect": false },
+				{ "title": "Pliers", "image": "", "isCorrect": true },
+				{ "title": "Hammer", "image": "", "isCorrect": false }
+			]
+		},
+		{
+			"riddle": "I sail on water, an adventure awaits, Through storms and calm seas, I navigate. With a crew on board, we seek the unknown, What am I, a vessel of tales to be shown?",
+			"options": [
+				{ "title": "Train", "image": "", "isCorrect": false },
+				{ "title": "Car", "image": "", "isCorrect": false },
+				{ "title": "Ship", "image": "", "isCorrect": true }
+			]
+		},
+		{
+			"riddle": "In tales of old, I wielded a blade, A pirate's heart, in the sun and the shade. With a hat on my head, and a treasure to find, What am I, in the lore of humankind?",
+			"options": [
+				{ "title": "Explorer", "image": "", "isCorrect": false },
+				{ "title": "Captain", "image": "", "isCorrect": false },
+				{ "title": "Pirate", "image": "", "isCorrect": true }
+			]
 		}
 	]
 }
