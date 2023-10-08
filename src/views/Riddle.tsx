@@ -56,12 +56,18 @@ const Riddle: React.FC<PageProps> = ({
 				transition={{ type: "spring", duration: 1 }}
 				className="flex flex-col items-center justify-center gap-8"
 			>
-				<div className="flex flex-col items-center gap-2 p-4 text-center m-auto">
-					<h1 className="text-xl font-black font-serif">Riddle</h1>
-					<p className="text-center text-sm m-auto italic font-serif">
-						{riddle}
-					</p>
-				</div>
+				<Card className="flex flex-col items-center gap-2 p-4 text-center m-auto">
+					<CardHeader className="flex items-center">
+						<CardTitle className="text-xl font-black font-serif">
+							Riddle
+						</CardTitle>
+					</CardHeader>
+					<CardContent>
+						<p className="items-center text-center text-sm m-auto italic font-serif">
+							{riddle}
+						</p>
+					</CardContent>
+				</Card>
 				<div className="grid grid-cols-3 gap-4">
 					{options &&
 						options.map((option, index) => (

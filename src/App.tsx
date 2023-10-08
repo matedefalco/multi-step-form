@@ -27,11 +27,11 @@ const App = () => {
 			/>
 		)
 	} else {
-		currentPage = <Outcome />
+		currentPage = <Outcome onClick={() => handlePageChange(0)} />
 	}
 
 	return (
-		<main className="w-full h-full min-h-screen bg-island bg-cover flex flex-col items-center justify-center">
+		<main className="w-full h-full min-h-screen bg-island bg-cover flex flex-col items-center justify-center p-8">
 			{currentPage}
 		</main>
 	)
